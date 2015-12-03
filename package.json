@@ -1,0 +1,25 @@
+{
+  "name": "numbers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test",
+    "test-watch": "mocha -w test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsstrn/numbers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsstrn/numbers/issues"
+  },
+  "homepage": "https://github.com/jsstrn/numbers#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "supertest": "^1.1.0"
+  }
+}
