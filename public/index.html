@@ -61,7 +61,7 @@
                 <div class="col-md-4">
                     <h2>Player Name</h1>
                         <div class="panel panel-default">
-                            <h3>Melvin</h3>
+                            <h3><div id="playerName">Melvin</div></h3>
                         </div>
                 </div>    
                 <div class="col-md-4">
@@ -80,15 +80,16 @@
                 <div class="col-md-8">
                     <h2>Random Question</h1>
                         <div class="panel panel-default">
-                                <h3>10 + 10 = ?<form>
+                                <h3><span id="first">10</span> + <span id="second">20</span> = ?<form>
                                 <h3>Enter Here!</h3>
                                 <input type="text" score="score"></form></h3>
                                 
                                 <div class="panel-footer">
                                  <ul class="list-unstyled">
                                     <button type="button" class="btn btn-success">Start Game</button> 
+                                    <button type="button" class="btn btn-warning">Reset Game</button>
                                 </ul>
-                            </div>
+                                </div>
                         </div>
                 </div>
                 </div>  
@@ -124,7 +125,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
+    <script src="js/scoreboard.js"></script>
     <script src="js/game.js"></script>
 </body>
 
