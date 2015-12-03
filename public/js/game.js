@@ -1,20 +1,19 @@
 var table = document.getElementById('scoreboard')
 
 fetch('/scores')
-	.then(function (res) {
-		res.json().then(function (scoreboard) {
-			scoreboard.forEach(function (score) {
-				var tr = document.createElement('tr')
-				var tdName = document.createElement('td')
-				var tdScore = document.createElement('td')
-				tdName.textContent = score.playerName
-				tdScore.textContent = score.score
-				tr.appendChild(tdName)
-				tr.appendChild(tdScore)
-				table.appendChild(tr)
-			})
-		})
-	})
+  .then(res => res.json())
+  .then(scoreboard => {
+    scoreboard.forEach(function (score) {
+      var tr = document.createElement('tr')
+      var tdName = document.createElement('td')
+      var tdScore = document.createElement('td')
+      tdName.textContent = score.playerName
+      tdScore.textContent = score.score
+      tr.appendChild(tdName)
+      tr.appendChild(tdScore)
+      table.appendChild(tr)
+    })
+  })
 
 var playerName = window.prompt("Please Enter Your Name. Thanks Bro")
 checkName(playerName)
@@ -30,14 +29,14 @@ function checkName (name) {
 
 function RandomNum () {
 	var firstNum = Math.floor((Math.random() * 10) + 1)
-	var secondNum = Math.floor((Math.random() * 10) + 1)	
+	var secondNum = Math.floor((Math.random() * 10) + 1)
 
 	var getFirst = document.getElementById('first')
 	getFirst.innerHTML = "<span id='first'>"+firstNum + "</span>"
 
 	var getSecond = document.getElementById('second')
 	getSecond.innerHTML = "<span id='second'>"+secondNum + "</span>"
-	
+
 	var total = firstNum + secondNum
 	var submitButton = document.querySelector('.btn-primary')
 	// submitButton.addEventListener('click', function() {
