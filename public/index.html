@@ -54,78 +54,73 @@
 
   <!-- Page Content -->
   <div class="container">
+    <!-- first row -->
     <div class="row">
       <div class="col-lg-12 text-center">
         <div class="col-md-4">
-          <h2>Player Name</h1>
+          <h2>Player Name</h2>
             <div class="panel panel-default">
               <h3><div id="playerName">Melvin</div></h3>
             </div>
           </div>
           <div class="col-md-4">
-            <h2>Timer</h1>
+            <h2>Timer</h2>
               <div class="panel panel-default">
-                <h3><div class="timer"><span id="time">10:00</span> seconds</div></h3>
+                <h3><span id="time">10:00</span> seconds</h3>
               </div>
             </div>
             <div class="col-md-4">
-              <h2>Score</h1>
+              <h2>Score</h2>
                 <div class="panel panel-default">
-                  <h3><div id="score">0</div></h3>
+                  <h3 id="score">0</h3>
                 </div>
-              </div>
-              <hr>
-              <div class="col-md-8">
-                <h2>Random Question</h1>
-                  <div class="panel panel-default">
-                    <h3><span id="first">10</span> + <span id="second">20</span> = ?
-                      <form>
-                        <h3>Enter Here!</h3>
-                        <input type="text" score="score">
-                      </form>
-                    </h3>
-                        <input type="text" class="answer" id="answer">
-                        <button name="data" type="button" onclick="RandomNum()" class="btn btn-primary">Submit</button>
-                      </form>
-                      <br>
-                      <br>
-                      <div class="panel-footer">
-                        <ul class="list-unstyled">
-                          <button type="button" class="btn btn-success">Start Game</button>
-                          <button type="button" class="btn btn-warning">Reset Game</button>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <h2>Scoreboard</h1>
-                    <div class="panel panel-default">
-                      <div class="panel-body">
-                        <table class="table" id="scoreboard">
-                          <tr>
-                            <td>Name</td>
-                            <td>Score</td>
-                          </tr>
-                        </table>
-                      </div>
-                      <div class="panel-footer">
-                        <ul class="list-unstyled">
-                          <li>Bootstrap v3.3.6</li>
-                          <li>Developed by Team DJIM</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div> <!-- /.row -->
-              </div> <!-- /.container -->
+            </div>
+    </div> <!-- / first .row -->
+    <!-- second row -->
+    <div class="row">
+      <div class="col-lg-8 text-center">
+        <h2>Random Question</h1>
+          <div class="panel panel-default">
+            <h3><span id="first">10</span> + <span id="second">20</span> = ?
+              <form>
+                <h3>Enter Here!</h3>
+                <input type="text" score="score">
+              </form>
+            </h3>
+            <input type="text" class="answer" id="answer">
+            <button name="data" type="button" onclick="RandomNum()" class="btn btn-primary">Submit</button>
+          </form>
+          <br>
+          <br>
+          <div class="panel-footer">
+            <ul class="list-unstyled">
+              <button type="button" class="btn btn-success">Start Game</button>
+              <button type="button" class="btn btn-warning">Reset Game</button>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 text-center">
+        <h2>Scoreboard</h2>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <table class="table text-center" id="scoreboard">
+              <tr>
+                <th class="text-center">Name</th>
+                <th class="text-center">Score</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div><!-- / second .row -->
+  <footer class="text-center">Developed by Team DJIM</footer>
+  <!-- jQuery Version 1.11.1 -->
+  <script src="js/jquery.js"></script>
 
-              <!-- jQuery Version 1.11.1 -->
-              <script src="js/jquery.js"></script>
-
-              <!-- Bootstrap Core JavaScript -->
-              <script src="js/bootstrap.min.js"></script>
-              <script src="js/game.js"></script>
-              <script src="js/scores.js"></script>
-            </body>
-            </html>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/scores.js"></script>
+</body>
+</html>

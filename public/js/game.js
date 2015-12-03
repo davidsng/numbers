@@ -15,8 +15,8 @@ fetch('/scores')
     })
   })
 
-var playerName = window.prompt("Please Enter Your Name. Thanks Bro")
-checkName(playerName)
+// var playerName = window.prompt("Please Enter Your Name. Thanks Bro")
+// checkName(playerName)
 var getPlayerName = document.getElementById('playerName')
 getPlayerName.textContent = playerName
 
