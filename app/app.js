@@ -29,4 +29,29 @@ app.get('/scores', (req, res) => {
   })
 })
 
+app.post('/scores', (req, res) => {
+  const score = new Score(req.body)
+  score.save(err => {
+    if (err) { console.error(err); res.status(500).end(err) }
+    console.log('New player added.')
+    res.end()
+  })
+})
+
+app.put('/scores/', (req, res) => {
+  var query = { playerName: req.body.playerName }
+  Score.findOneAndUpdate(query, req.body, { new: true }, (err, score) => {
+    if (err) {
+      console.error(err)
+      res.status(500).end(err)
+    } else if (score) {
+      console.log('Player updated', JSON.stringify(score))
+      res.status(200).end('Player updated')
+    } else {
+      console.warn('Not found')
+      res.status(404).end('Not found')
+    }
+  })
+})
+
 module.exports = app
