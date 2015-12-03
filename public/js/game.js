@@ -1,18 +1,26 @@
-var table = document.getElementById('scoreboard')
+//Get Player Name
+var playerName = prompt("Please Enter Your Name. Thanks Bro")
+checkName(playerName)
+var getPlayerName = document.getElementById('playerName')
+getPlayerName.textContent = playerName
 
-fetch('/scores')
-	.then(function (res) {
-		res.json().then(function (scoreboard) {
-			scoreboard.forEach(function (score) {
-				console.log(score)
-				var tr = document.createElement('tr')
-				var tdName = document.createElement('td')
-				var tdScore = document.createElement('td')
-				tdName.textContent = score.playerName
-				tdScore.textContent = score.score
-				tr.appendChild(tdName)
-				tr.appendChild(tdScore)
-				table.appendChild(tr)
-			})
-		})
-	})
+//This only does once - need to find out how to do it for multiple entries
+function checkName (name) {
+	if (name == null || name == "")
+		var playerName = prompt("Please Enter Your Name. Thanks Bro")
+}
+
+//RESET GAME
+var resetButton = document.querySelector('.btn-warning')
+resetButton.addEventListener('click', function () {
+	window.location.reload(false)
+})
+
+function RandomNum () {
+	var firstNum = Math.floor((Math.random() * 10) + 1)
+	var secondNum = Math.floor((Math.random() * 10) + 1)	
+	console.log(firstNum)
+	console.log(secondNum)
+}
+RandomNum()
+RandomNum()
