@@ -67,7 +67,7 @@
                 <div class="col-md-4">
                     <h2>Timer</h1>
                         <div class="panel panel-default">
-                            <h3>10:00 seconds</h3>
+                            <h3><div class="timer"><span id="time">10:00</span> seconds</div></h3>
                         </div>
                 </div> 
                 <div class="col-md-4">
@@ -96,19 +96,11 @@
                     <h2>Scoreboard</h1>
                         <div class="panel panel-default">
                             <div class="panel-body">
-                                <table class="table">
+                                <table class="table" id="scoreboard">
                                     <tr>
                                         <td>Name</td>
                                         <td>Score</td>
-                                      </tr>
-                                    <tr>
-                                        <td>Jill</td>
-                                        <td>50</td>
-                                      </tr>
-                                      <tr>
-                                        <td>Eve</td>
-                                        <td>94</td>
-                                      </tr>
+                                    </tr>
                                 </table>
                             </div>
                             <div class="panel-footer">
@@ -133,6 +125,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
+    <script src="js/game.js"></script>
 </body>
 
 </html>
