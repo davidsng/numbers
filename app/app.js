@@ -14,7 +14,7 @@ const dbpassword = 'password'
 const dburl = 'mongodb://' + dbuser + ':' + dbpassword + '@ds059644.mongolab.com:59644/playground'
 mongoose.connect(dburl)
 const db = mongoose.connection
-db.on('error', console.error.bind(console, 'connection error: '))
+// db.on('error', console.error.bind(console, 'connection error: '))
 
 // define mongoose model (schema)
 const Score = mongoose.model('Score', {

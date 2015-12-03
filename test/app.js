@@ -19,7 +19,7 @@ describe('All Tests', () => {
         .expect(200)
         .expect('Content-Type', /html/)
         .expect(res => {
-          expect(res.body).to.be('array')
+          expect(res.body).to.be.a('object')
         })
         .end(done)
     })
