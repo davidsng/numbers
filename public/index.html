@@ -61,13 +61,13 @@
                 <div class="col-md-4">
                     <h2>Player Name</h1>
                         <div class="panel panel-default">
-                            <h3><div id="playerName">Melvin</div></h3>
+                            <h3><div id="playerName">Your Name</div></h3>
                         </div>
                 </div>    
                 <div class="col-md-4">
                     <h2>Timer</h1>
                         <div class="panel panel-default">
-                            <h3><div class="timer"><span id="time">10:00</span> seconds</div></h3>
+                            <h3><div id="countdown">20</div></h3>
                         </div>
                 </div> 
                 <div class="col-md-4">
@@ -77,14 +77,14 @@
                         </div>
                 </div>
                 <p>------------------------------------------------------------------------------------------------------------------------------------------------------</p>
-                <div class="col-md-8">
-                    <h2>Random Question</h1>
+                <div>
+                    <h2>Who's the Math Wiz in Class?</h1>
                         <div class="panel panel-default">
                                 <h3><span id="first">10</span> + <span id="second">20</span> = ?
                                 <form>
                                 <h3>Enter Here!</h3>
-                                <input type="text" class="answer" id="answer">
-                                <button name="data" type="button" onclick="RandomNum()" class="btn btn-primary">Submit</button>
+                                <input type="text" class="answer" id="answer" onkeypress="return event.keyCode != 13" onkeydown="search(this)">
+                                <!-- <button name="data" type="button" onclick="RandomNum()" class="btn btn-primary">Submit</button> -->
                                 </form>
                                 <br>
                                 <br>
@@ -96,8 +96,8 @@
                                 </div>
                         </div>
                 </div>
-                </div>  
-                <div class="col-md-4">
+                </div> 
+                <div class="col-md-2 col-md-offset-5">
                     <h2>Scoreboard</h1>
                         <div class="panel panel-default">
                             <div class="panel-body">
@@ -115,8 +115,7 @@
                                 </ul>
                             </div>
                         </div>
-                </div>  
-               
+                </div> 
             </div>
         </div>
         <!-- /.row -->

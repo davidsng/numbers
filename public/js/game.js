@@ -17,57 +17,59 @@ fetch('/scores')
 	})
 
 var playerName = window.prompt("Please Enter Your Name. Thanks Bro")
-checkName(playerName)
 var getPlayerName = document.getElementById('playerName')
 getPlayerName.textContent = playerName
 
-function checkName (name) {
-	if (name == null || name == "")
-		var playerName = prompt("Please Enter Your Name. Thanks Bro")
+
+ 
+function countdown() {
+	var seconds;
+	var temp;
+	seconds = document.getElementById('countdown').innerHTML;
+	seconds = parseInt(seconds, 10);
+
+	if (seconds == 1) {
+	  temp = document.getElementById('countdown');
+	  temp.innerHTML = "0";
+	  return;
+	}
+
+	seconds--;
+	temp = document.getElementById('countdown');
+	temp.innerHTML = seconds;
+	timeoutMyOswego = setTimeout(countdown, 1000);
 }
+ 
+  countdown();
 
-
+function search(ele) {
+    if(event.keyCode == 13) {
+        var getFirst = parseInt(document.getElementById('first').textContent)
+        var getSecond = parseInt(document.getElementById('second').textContent)
+        var total = getFirst + getSecond
+        console.log(total)
+        if (total === parseInt(ele.value)){
+        	document.getElementById('answer').value = ""
+	    	document.getElementById('score').value = ""
+	    	updateScore()
+	    	RandomNum()
+        } else {
+	    	document.getElementById('answer').value = ""
+	    	document.getElementById('score').value = ""
+	    	reduceScore()
+	    	RandomNum()
+	    }
+    }
+}
 
 function RandomNum () {
 	var firstNum = Math.floor((Math.random() * 10) + 1)
 	var secondNum = Math.floor((Math.random() * 10) + 1)	
-
 	var getFirst = document.getElementById('first')
 	getFirst.innerHTML = "<span id='first'>"+firstNum + "</span>"
-
 	var getSecond = document.getElementById('second')
 	getSecond.innerHTML = "<span id='second'>"+secondNum + "</span>"
-	
 	var total = firstNum + secondNum
-	var submitButton = document.querySelector('.btn-primary')
-	// submitButton.addEventListener('click', function() {
-	// 	var getAns = document.getElementById('answer').value
-	// 	console.log(getAns)
-	// 	getAns1 = parseInt(getAns)
-	// 	if(total === getAns1) {
-	// 		updateScore()
-	// 		document.getElementById('answer').value = ""
-	// 		RandomNum()
-	// 	}
-	// })
-	submitButton.onclick = function (){
-		var getAns = document.getElementById('answer').value
-		getAns1 = parseInt(getAns)
-		//Correct Answer
-		if(total === getAns1) {
-			document.getElementById('answer').value = ""
-			document.getElementById('score').value = ""
-			updateScore()
-			RandomNum()
-		} else {
-			document.getElementById('answer').value = ""
-			document.getElementById('score').value = ""
-			reduceScore()
-			RandomNum()
-		}
-
-	}
-
 }
 
 function resetGame() {
