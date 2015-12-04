@@ -1,22 +1,26 @@
 var table = document.getElementById('scoreboard')
 
 fetch('/scores')
-	.then(function (res) {
-		res.json().then(function (scoreboard) {
-			scoreboard.forEach(function (score) {
-				var tr = document.createElement('tr')
-				var tdName = document.createElement('td')
-				var tdScore = document.createElement('td')
-				tdName.textContent = score.playerName
-				tdScore.textContent = score.score
-				tr.appendChild(tdName)
-				tr.appendChild(tdScore)
-				table.appendChild(tr)
-			})
-		})
-	})
+  .then(res => res.json())
+  .then(scoreboard => {
+    scoreboard.forEach(function (score) {
+      var tr = document.createElement('tr')
+      var tdName = document.createElement('td')
+      var tdScore = document.createElement('td')
+      tdName.textContent = score.playerName
+      tdScore.textContent = score.score
+      tr.appendChild(tdName)
+      tr.appendChild(tdScore)
+      table.appendChild(tr)
+    })
+  })
 
+<<<<<<< HEAD
 var playerName = window.prompt("Please Enter Your Name. Thanks Bro")
+=======
+// var playerName = window.prompt("Please Enter Your Name. Thanks Bro")
+// checkName(playerName)
+>>>>>>> jsstrn/master
 var getPlayerName = document.getElementById('playerName')
 getPlayerName.textContent = playerName
 
@@ -64,11 +68,20 @@ function search(ele) {
 
 function RandomNum () {
 	var firstNum = Math.floor((Math.random() * 10) + 1)
+<<<<<<< HEAD
 	var secondNum = Math.floor((Math.random() * 10) + 1)	
+=======
+	var secondNum = Math.floor((Math.random() * 10) + 1)
+
+>>>>>>> jsstrn/master
 	var getFirst = document.getElementById('first')
 	getFirst.innerHTML = "<span id='first'>"+firstNum + "</span>"
 	var getSecond = document.getElementById('second')
 	getSecond.innerHTML = "<span id='second'>"+secondNum + "</span>"
+<<<<<<< HEAD
+=======
+
+>>>>>>> jsstrn/master
 	var total = firstNum + secondNum
 }
 

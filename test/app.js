@@ -15,11 +15,22 @@ describe('All Tests', () => {
   describe('GET /scores', () => {
     it('should respond with JSON file', (done) => {
       request(app)
-        .get('/')
+        .get('/scores')
         .expect(200)
-        .expect('Content-Type', /html/)
+        .expect('Content-Type', /json/)
         .expect(res => {
-          expect(res.body).to.be('array')
+          expect(res.body).to.be.a('array')
+        })
+        .end(done)
+    })
+  })
+  describe('PUT /scores', () => {
+    it('should create a new player', (done) => {
+      request(app)
+        .put('/scores')
+        .expect(200)
+        .expect(res => {
+          expect(res.body).to.be.a('object')
         })
         .end(done)
     })
