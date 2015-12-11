@@ -1,8 +1,8 @@
 var table = document.getElementById('scoreboard')
 
 fetch('/scores')
-	.then(function (res) {
-		res.json().then(function (scoreboard) {
+  .then(res => res.json())
+  .then(function (scoreboard) {
 			scoreboard.forEach(function (score) {
 				var tr = document.createElement('tr')
 				var tdName = document.createElement('td')
@@ -14,4 +14,3 @@ fetch('/scores')
 				table.appendChild(tr)
 			})
 		})
-	})
